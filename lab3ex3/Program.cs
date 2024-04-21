@@ -7,20 +7,21 @@ Dificultate ridicata
 • Numerele patrate perfecte din vector
 Apelati functiile si afisati-le rezultatele.*/
 Console.WriteLine("Introduceti lungimea vectorul");
-int n=int.Parse(Console.ReadLine());
+int n = int.Parse(Console.ReadLine());
 int[] vector = new int[n];
 for (int i=0; i<vector.Length; i++)
 {
     vector[i] = int.Parse(Console.ReadLine());
 }
 
-int maxElement=CelMaiMare(vector);
-int minElement=CelMaiMic(vector);
+int maxElement = CelMaiMare(vector);
+int minElement = CelMaiMic(vector);
 int[] nrdivizibil = NumereDivizibileCuTrei(vector);
 
-Console.WriteLine("Cel mai mare element din vector este " +maxElement);
+Console.WriteLine("Cel mai mare element din vector este " + maxElement);
 Console.WriteLine("Cel mai mic element din vector este " + minElement);
 Console.WriteLine("Numerele divizibile cu 3 " + nrdivizibil);
+
 static int CelMaiMare(int[]vector)
 {
     int max = vector[0];
@@ -28,9 +29,10 @@ static int CelMaiMare(int[]vector)
     {
         if (vector[i] > max)
         {
-            max= vector[i];
+            max = vector[i];
         }    
     }
+
     return max;
 }
 
@@ -41,12 +43,15 @@ static int CelMaiMic(int[]vector1)
     {
         if(vector1[i] < min)
         {
-            min= vector1[i];
+            min = vector1[i];
         }
     }
+
     return min;
 }
+
 static int [] NumereDivizibileCuTrei(int[]vector2)
+
 {
     int count = 0;
     for(int i=0; i<vector2.Length; i++)
@@ -54,9 +59,13 @@ static int [] NumereDivizibileCuTrei(int[]vector2)
         if (vector2[i]%3==0)
         {
             count++;
+            Console.WriteLine("Numerele divizibile cu 3 sunt:" + vector2[i]);
         }
+        
     }
-    int[] rezultat = new int[count];
+    return vector2;
+
+   /* int[] rezultat = new int[count];
     int index = 0;
     for(int i=0; i<vector2.Length; i++)
     {
@@ -66,7 +75,8 @@ static int [] NumereDivizibileCuTrei(int[]vector2)
             index++;
         }
     }
-    return rezultat;
+
+    return rezultat;*/
    
 }
 /*static void NumereDivizibileCuTreiSiAfisare(int[]vector3)
