@@ -1,7 +1,7 @@
 ﻿//Scrieti o functie care va calcula suma cifrelor unui numar.
 Console.WriteLine("Introduceti numarul: ");
-var n = int.Parse(Console.ReadLine());
-int suma = Suma(n);
+int n = int.Parse(Console.ReadLine());
+var suma = Suma(n);
 Console.WriteLine(suma);
 
 static int Suma(int n)

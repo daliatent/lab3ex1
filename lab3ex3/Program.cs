@@ -38,7 +38,7 @@ static int CelMaiMare(int[]vector)
 
 static int CelMaiMic(int[]vector1)
 {
-    int min=vector1[0];
+    int min = vector1[0];
     for(int i=1; i<vector1.Length; i++)
     {
         if(vector1[i] < min)
@@ -53,17 +53,20 @@ static int CelMaiMic(int[]vector1)
 static int [] NumereDivizibileCuTrei(int[]vector2)
 
 {
-    int count = 0;
+    int numeredivizibile;
     for(int i=0; i<vector2.Length; i++)
     {
         if (vector2[i]%3==0)
         {
-            count++;
-            Console.WriteLine("Numerele divizibile cu 3 sunt:" + vector2[i]);
+            
+            numeredivizibile = vector2[i];
+            Console.WriteLine(numeredivizibile);
+            
         }
         
     }
-    return vector2;
+
+    return vector2 as int[];
 
    /* int[] rezultat = new int[count];
     int index = 0;
